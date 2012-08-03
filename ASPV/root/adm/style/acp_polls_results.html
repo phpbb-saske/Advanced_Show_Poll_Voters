@@ -1,0 +1,93 @@
+<!-- INCLUDE overall_header.html -->
+
+<a name="maincontent"></a>
+
+<h1>{L_ACP_POLLS_RESULTS}</h1>
+
+<p>{L_ACP_POLLS_RESULTS_EXPLAIN}</p>
+
+<!-- IF S_WARNING -->
+	<div class="errorbox">
+		<h3>{L_WARNING}</h3>
+		<p>{WARNING_MSG}</p>
+	</div>
+<!-- ENDIF -->
+
+	<!-- IF .polls -->
+	<table cellspacing="1">
+	<thead>
+	<tr>
+		<th>{L_ACP_POLLS_RESULTS_TOPIC}</th>
+		<th>{L_ACP_POLLS_RESULTS_POLL}</th>
+		<th>{L_ACP_POLLS_RESULTS_OPTIONS}</th>
+		<th>{L_ACP_POLLS_RESULTS_VOTES}</th>
+	</tr>
+	</thead>
+	<tbody>
+		<!-- BEGIN polls -->
+			<!-- IF polls.S_ROW_COUNT is even --><tr class="row1"><!-- ELSE --><tr class="row2"><!-- ENDIF -->
+				<td><a href="{polls.TOPIC_URL}">{polls.TOPIC_TITLE}</a></td>
+				<td>{polls.POLL_TITLE}</td>
+				<td>{polls.OPTIONS_COUNT}</td>
+				<td><a href="{polls.U_POLL_RESULTS}">{polls.VOTES_TOTAL}</a></td>
+			</tr>
+		<!-- END polls -->
+	</tbody>
+	</table>
+	<!-- ENDIF -->
+
+	<!-- IF .poll_results -->
+	<table cellspacing="1">
+	<caption>{TOPIC_TITLE} ({POLL_TITLE})</caption>
+	<thead>
+	<tr>
+		<th>{L_ACP_POLLS_RESULTS_OPTIONS}</th>
+		<th>{L_ACP_POLLS_RESULTS_VOTES}</th>
+		<th>{L_ACP_POLLS_RESULTS_USERS}</th>
+	</tr>
+	</thead>
+	<tbody>
+		<!-- BEGIN poll_results -->
+			<!-- IF poll_results.S_ROW_COUNT is even --><tr class="row1"><!-- ELSE --><tr class="row2"><!-- ENDIF -->
+				<td>{poll_results.POLL_OPTION_TEXT}</td>
+				<td>{poll_results.POLL_OPTION_TOTAL}</td>
+				<td>{poll_results.VOTED_USERS}</td>
+			</tr>
+		<!-- END poll_results -->
+	</tbody>
+	</table>
+	<!-- ENDIF -->
+<br />
+
+<form id="acp_poll_results" method="post" action="{U_ACTION}">
+	<fieldset>
+              <dl>
+                 <dt><label for="poll_results_enable">{L_ACP_POLL_RESULTS_ENABLE}</label></dt>
+                 <dd><input type="radio" class="radio" id="poll_results_enable" name="poll_results_enable" value="1" <!-- IF S_POLL_RESULTS_ENABLE -->checked="checked"<!-- ENDIF -->/> {L_YES} &nbsp;
+                    <input type="radio" class="radio" name="poll_results_enable" value="0" <!-- IF not S_POLL_RESULTS_ENABLE -->checked="checked"<!-- ENDIF --> /> {L_NO}</dd>
+              </dl>
+              <dl>
+			  <dt><label>{L_ACP_POLL_RESULTS_VERSION}:</label></dt>
+				<dd>
+         <!-- IF S_VERSION_UP_TO_DATE -->
+            <!-- IF S_VERSIONCHECK_FAIL -->
+               <dt><strong>{ASPV_VERSION}</strong></dt> {L_VERSIONCHECK_FAIL}
+            <!-- ELSE -->
+               <strong style="color: #228822;">{ASPV_VERSION}</strong>
+            <!-- ENDIF -->
+         <!-- ELSE -->
+               <strong><a href="{U_VERSIONCHECK}" title="{L_MORE_INFORMATION}" style="color: #BC2A4D;" onclick="window.open(this.href);return false;">{ASPV_VERSION}</a></strong>
+         <!-- ENDIF -->
+				</dd>
+			</dl>
+	</fieldset>
+		<fieldset>
+		<p class="submit-buttons">
+			<input class="button1" type="submit" id="submit" name="submit" value="{L_SUBMIT}" />&nbsp;
+			<input class="button2" type="reset" id="reset" name="reset" value="{L_RESET}" />
+		</p>
+	</fieldset>
+	{S_FORM_TOKEN}
+</form>
+
+<!-- INCLUDE overall_footer.html -->
