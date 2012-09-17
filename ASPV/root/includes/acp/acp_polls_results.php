@@ -147,7 +147,7 @@ class acp_polls_results
 
 			    set_config('poll_results_enable', request_var('poll_results_enable', 1));
 
-			trigger_error($user->lang['SO_SAVED'] . adm_back_link($this->u_action));
+			trigger_error($user->lang['SAVED'] . adm_back_link($this->u_action));
 		}
 		
 		$template->assign_vars(array(
