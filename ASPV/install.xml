@@ -42,7 +42,7 @@
              SELECT u.username, u.user_colour, pv.vote_user_id, pv.vote_time
              FROM ' . POLL_VOTES_TABLE . ' pv, ' . USERS_TABLE . ' u
              WHERE pv.topic_id = ' . $topic_id . '
-                AND poll_option_id = ' . $poll_info[$i]['poll_option_id'] . '
+                AND poll_option_id = (int) ' . $poll_info[$i]['poll_option_id'] . '
                 AND pv.vote_user_id = u.user_id
              ORDER BY u.username_clean ASC, pv.vote_user_id ASC';
 
@@ -75,7 +75,7 @@
 				<find><![CDATA[		'L_MAX_VOTES'		=> ($topic_data['poll_max_options'] == 1) ? $user->lang['MAX_OPTION_SELECT'] : sprintf($user->lang['MAX_OPTIONS_SELECT'], $topic_data['poll_max_options']),
 		'L_POLL_LENGTH'		=> ($topic_data['poll_length']) ? sprintf($user->lang[($poll_end > time()) ? 'POLL_RUN_TILL' : 'POLL_ENDED_AT'], $user->format_date($poll_end)) : '',
 ]]></find>
-				<action type="after-add"><![CDATA[		'POLL_OPTION_RESULT_PERMISSION'    => ($config['poll_results_enable'] && $auth->acl_get('f_poll_results', $forum_id)) ? true : false; ]]></action>
+				<action type="after-add"><![CDATA[		'POLL_OPTION_RESULT_PERMISSION'    => ($config['poll_results_enable'] && $auth->acl_get('f_poll_results', $forum_id)) ? true : false, ]]></action>
 			</edit>
 		</open>
 		<open src="language/en/acp/permissions_phpbb.php">
