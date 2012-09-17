@@ -39,13 +39,13 @@ $lang = array_merge($lang, array(
 	'ACP_POLLS_RESULTS_INDEX_TITLE'		=> 'Advanced Show Poll Voters',
 	'ACP_POLLS_RESULTS'					=> 'Advanced Show Poll Voters',
 	'ACP_POLLS_RESULTS_EXPLAIN'			=> 'Here you can find detailed information about all polls in the entire forum. To see a list of users who have voted in a particular poll, click on the number of responses in front of the desired poll.',
-	'ACP_POLL_RESULTS_ENABLE'			=> 'Enable / Disable See who voted in the polls?',
+	'ACP_POLL_RESULTS_ENABLE'			=> 'Show voters near poll results in topic',
 	'ACP_POLLS_RESULTS_TOPIC'			=> 'Topic',
 	'ACP_POLLS_RESULTS_POLL'			=> 'Poll Title',
 	'ACP_POLLS_RESULTS_OPTIONS'			=> 'Options',
 	'ACP_POLLS_RESULTS_VOTES'			=> 'Votes',
 	'ACP_POLLS_RESULTS_USERS'			=> 'Users',
-	'ACP_POLL_RESULTS_VERSION' 			=> 'Versión',
+	'ACP_POLL_RESULTS_VERSION' 			=> 'Version',
 	'SAVED'								=> 'The changes have been successfully',
 ));
 

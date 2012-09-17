@@ -81,7 +81,7 @@
 		<open src="language/en/acp/permissions_phpbb.php">
 			<edit>
 				<find><![CDATA[	'acl_f_poll'		=> array('lang' => 'Can create polls', 'cat' => 'polls'),]]></find>
-				<action type="after-add"><![CDATA[	'acl_f_poll_results'   => array('lang'   => 'You can see who voted in the polls','cat'   => 'polls'),]]></action>
+				<action type="after-add"><![CDATA[	'acl_f_poll_results'   => array('lang'   => 'Can see who voted on each option','cat'   => 'polls'),]]></action>
 			</edit>
 		</open>
 		<open src="styles/prosilver/template/viewtopic_body.html">
