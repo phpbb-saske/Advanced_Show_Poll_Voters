@@ -69,7 +69,7 @@ $versions = array(
 			),
 		),
 		'permission_add' => array(
-			array('f_poll_results', 1),
+			array('f_poll_results', false),
                 ), 
 
 	),
