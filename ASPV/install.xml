@@ -42,7 +42,7 @@
              SELECT u.username, u.user_colour, pv.vote_user_id, pv.vote_time
              FROM ' . POLL_VOTES_TABLE . ' pv, ' . USERS_TABLE . ' u
              WHERE pv.topic_id = ' . $topic_id . '
-                AND poll_option_id = (int) ' . $poll_info[$i]['poll_option_id'] . '
+                AND poll_option_id =  ' . (int) $poll_info[$i]['poll_option_id'] . '
                 AND pv.vote_user_id = u.user_id
              ORDER BY u.username_clean ASC, pv.vote_user_id ASC';
 
