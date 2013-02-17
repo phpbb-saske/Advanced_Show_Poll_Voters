@@ -14,10 +14,10 @@
 			<author>
 				<realname><![CDATA[Salva]]></realname>
 				<username><![CDATA[Saske1]]></username>
-				<homepage><![CDATA[http://www.phpbbsaske.com]]></homepage>
+				<homepage><![CDATA[https://github.com/phpbb-saske/Advanced_Show_Poll_Voters]]></homepage>
 			</author>
 		</author-group>
-		<mod-version>1.0.0</mod-version>
+		<mod-version>1.0.1</mod-version>
 		<installation>
 			<level>easy</level>
 			<time>300</time>
@@ -31,6 +31,8 @@
 			<file from="root/includes/acp/acp_polls_results.php" to="includes/acp/acp_polls_results.php"/>
 			<file from="root/includes/acp/info/acp_polls_results.php" to="includes/acp/info/acp_polls_results.php"/>
 			<file from="root/language/en/mods/info_acp_polls_results.php" to="language/en/mods/info_acp_polls_results.php"/>
+			<file from="root/language/es/mods/info_acp_polls_results.php" to="language/es/mods/info_acp_polls_results.php"/>
+			<file from="root/language/de/mods/info_acp_polls_results.php" to="language/de/mods/info_acp_polls_results.php"/>
 			<file from="root/umil/" to="umil/"/>
 		</copy>
 		<open src="viewtopic.php">
