@@ -47,6 +47,7 @@ $lang = array_merge($lang, array(
 	'ACP_POLLS_RESULTS_USERS'			=> 'Usuarios',
 	'ACP_POLL_RESULTS_VERSION' 			=> 'Versión',
 	'SAVED'								=> 'Los cambios se han realizado con éxito',
+	'acl_f_poll_results'				=> array('lang' => 'Puede ver qué usuarios votaron a favor de una opción', 'cat' => 'polls'),
 ));
 
 ?>

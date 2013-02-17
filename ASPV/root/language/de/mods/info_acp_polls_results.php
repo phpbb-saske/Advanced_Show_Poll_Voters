@@ -1,7 +1,7 @@
 <?php
 /**
 *
-* polls_results [English]
+* polls_results [German]
 *
 * @package language
 * @version $Id: polls_results.php,v 1.0.0 2010/04/15 19:52:58 Saske Exp $
@@ -38,16 +38,16 @@ if (empty($lang) || !is_array($lang))
 $lang = array_merge($lang, array(
 	'ACP_POLLS_RESULTS_INDEX_TITLE'		=> 'Advanced Show Poll Voters',
 	'ACP_POLLS_RESULTS'					=> 'Advanced Show Poll Voters',
-	'ACP_POLLS_RESULTS_EXPLAIN'			=> 'Here you can find detailed information about all polls in the entire forum. To see a list of users who have voted in a particular poll, click on the number of responses in front of the desired poll.',
-	'ACP_POLL_RESULTS_ENABLE'			=> 'Show voters near poll results in topic',
-	'ACP_POLLS_RESULTS_TOPIC'			=> 'Topic',
-	'ACP_POLLS_RESULTS_POLL'			=> 'Poll Title',
-	'ACP_POLLS_RESULTS_OPTIONS'			=> 'Options',
-	'ACP_POLLS_RESULTS_VOTES'			=> 'Votes',
-	'ACP_POLLS_RESULTS_USERS'			=> 'Users',
+	'ACP_POLLS_RESULTS_EXPLAIN'			=> 'Hier findest du ausführliche Informationen über alle Umfragen im gesamten Forum. Um eine Liste der Benutzer zu sehen, welche an einer bestimmten Umfrage teilgenommen haben, klicke auf die Zahl der abgegebenen Stimmen bei dieser Umfrage.',
+	'ACP_POLL_RESULTS_ENABLE'			=> 'Benutzer die an einer Umfrage teilgenommen haben bei den Ergebnissen anzeigen',
+	'ACP_POLLS_RESULTS_TOPIC'			=> 'Thema',
+	'ACP_POLLS_RESULTS_POLL'			=> 'Titel der Umfrage',
+	'ACP_POLLS_RESULTS_OPTIONS'			=> 'Antwortmöglichkeiten',
+	'ACP_POLLS_RESULTS_VOTES'			=> 'Abgegebene Stimmen',
+	'ACP_POLLS_RESULTS_USERS'			=> 'Benutzer',
 	'ACP_POLL_RESULTS_VERSION' 			=> 'Version',
-	'SAVED'								=> 'The changes have been successfully',
-	'acl_f_poll_results'				=> array('lang' => 'May see which users voted for an option', 'cat' => 'polls'),
+	'SAVED'								=> 'Die Änderungen waren erfolgreich',
+	'acl_f_poll_results'				=> array('lang' => 'Darf sehen, wer für welche Antwortmöglichkeit gestimmt hat', 'cat' => 'polls'),
 ));
 
 ?>
